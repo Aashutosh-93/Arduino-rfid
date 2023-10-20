@@ -27,7 +27,7 @@ void loop() {
     if (authenticateCard() && !servoActive) {
       Serial.println("Access granted. Rotating servo.");
       servoActive = true;
-      rotateServo();
+      rotateServo(a);
     } else {
       Serial.println("Access denied or servo already active.");
     }
